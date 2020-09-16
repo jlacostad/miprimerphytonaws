@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>
+    
+        {% block title %}
+        {% endblock  %}
+        | Jaime Acosta
+    </title>
+</head>
+
+<body>
+
+    <h1> Sitios Web con Django | Jaime Acosta </h1>
+    <hr/>
+    <ul>
+        <li>
+            <a href="/index">Inicio</a>
+        </li>
+        <li>
+            <a href="/hola-mundo">Hola Mundo</a>
+        </li>
+        <li>
+            <a href="/articulos">Artículos</a>
+        </li>
+        <li>
+            <a href="/create-article">Crear artículo</a>
+        </li>
+        <li>
+            <a href="/create-full-article">Crear artículo 2</a>
+        </li>
+        <li>
+            <a href="/contacto">Contacto</a>
+        </li>
+        
+    </ul>
+    <hr/>   
+
+
+    <div id ="content">
+
+        {% block content %}
+        {% endblock content %}
+
+    </div>
+
+    <hr/>
+
+    <footer>
+        Master en Python &copy; Jaime Acosta
+    </footer>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}
+
+Formularios en Django
+
+{% endblock title %}
+
+
+
+{% block content %}
+
+<h1 class="title">Formularios en Django </h1>
+
+<form action="{% url 'save' %}" method="POST">
+
+    {% csrf_token %} 
+
+    <p>
+    <label for="title">Título: </label>
+    <input type="text" name="title"  placeholder="Escribe el título..."/>
+    </p>
+
+    <p>
+    <label for="content">Contenido: </label> 
+    <textarea name="content" cols="40" rows="10"> </textarea>
+    </p>
+
+    <p>
+    <label for="public">Publicado: </label>
+    <select name="public">
+        <option value="1">Si</option>
+        <option value="0">No</option>
+    </select>
+    </p>
+
+    <input type="submit" value="Guardar"/>
+</form>
+
+{% endblock content %}
